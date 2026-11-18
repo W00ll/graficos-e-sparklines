@@ -64,6 +64,12 @@
 <script>
   $(function () {
     $('.inlinesparkline').sparkline();
-  });
-</script>
+    const myvalues = [2, 1, 4, 9, 10, 1, 8];
+
+$('.dynamicsparkline').sparkline(myvalues);
+$('.dynamicbar').sparkline(myvalues, {
+  type: 'bar',
+  barColor: 'green'
+});
+  })</script>
 </body>
