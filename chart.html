@@ -58,8 +58,8 @@
                 </tr>
         </table>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
 
 <script>
@@ -67,13 +67,7 @@
     $('.inlinesparkline').sparkline();
     const myvalues = [2, 1, 4, 9, 10, 1, 8];
 
-$('.dynamicsparkline').sparkline(myvalues);
-$('.dynamicbar').sparkline(myvalues, {
-  type: 'bar',
-  barColor: 'green'
-});
-$('.inlinebar').sparkline();
-$.ajax({
+    $.ajax({
   url: 'dataset.csv',
   dataType: 'text',
 
@@ -98,5 +92,13 @@ $.ajax({
     $('.dsChart').text('Não foi possível carregar dataset.csv.');
   }
 });
+
+$('.dynamicsparkline').sparkline(myvalues);
+$('.dynamicbar').sparkline(myvalues, {
+  type: 'bar',
+  barColor: 'green'
+});
+$('.inlinebar').sparkline();
+
   })</script>
 </body>
